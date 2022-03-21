@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Online Shop</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+		<!-- FAVICON -->
+		<link rel="icon" href="../images/cd.ico">
+	</head>
+	<body>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+		</style>
+		
+		<!-- navbar -->
+		<div class="bg-dark fixed-top mb-4">
+			<ul class="d-flex justify-content-end align-items-center m-0 p-1">
+				<li class="list-unstyled mr-3">
+					<a href="#" class="text-white font-weight-bold">HOME</a>
+				</li>
+				<li class="list-unstyled mr-3">
+					<a href="#" class="text-white font-weight-bold">PRODUCTS</a>
+				</li>
+				<span id="orders" class="text-white font-weight-bold"></span>
+				<span id="cart" class="text-white font-weight-bold"></span>
+				<span id="navSession" class="text-white font-weight-bold"></span>
+				<span id="board" class="text-white font-weight-bold"></span>
+			</ul>
+		</div>
+
+		<!-- jumbotron -->
+		<main class="min-vh-100 bg-light py-5">
+
+			<div class="container">
+				<div>
+					<h1 id="greeting" class="text-center text-info font-weight-bold"></h1>
+				</div>
+
+				<div id="adminDashboard" class="text-center my-5">
+					
+				</div>
+				<h3 class="text-center">Browse our products</h3>
+				<hr>
+				<div id="activeProducts" class="row d-flex">
+				</div>
+				<hr>
+				<div id="adminLabel">
+				</div>
+
+				<div id="inactiveProducts" class="row d-flex">
+				</div>
+
+			</div>
+
+			<!-- footer -->
+			<div class="bg-dark p-0 fixed-bottom d-flex align-items-center justify-content-center">
+				<p class="m-0 text-white"> Carine &#64; March 2022 | E-commerce website | Zuitt Coding Bootcamp &#169;</p>
+			</div>
+		</main>
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+		<!-- External JS -->
+		<script src="./../js/script.js"></script>
+		<script src="./../js/main.js"></script>
+	</body>
+</html>

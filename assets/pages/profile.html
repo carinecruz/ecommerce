@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Online Shop</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+		<!-- FAVICON -->
+		<link rel="icon" href="../images/cd.ico">
+	</head>
+	<body>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+		</style>
+		
+		<!-- navbar -->
+		<div class="bg-dark fixed-top mb-4">
+			<ul class="d-flex justify-content-end align-items-center m-0 p-1">
+				<li class="list-unstyled mr-3">
+					<a href="#" class="text-white font-weight-bold">HOME</a>
+				</li>
+				<li class="list-unstyled mr-3">
+					<a href="./main.html" class="text-white font-weight-bold">PRODUCTS</a>
+				</li>
+
+				<span id="navSession" class="text-white font-weight-bold"></span>
+				<span id="board" class="text-white font-weight-bold"></span>
+			</ul>
+		</div>
+
+		<!-- jumbotron -->
+		<main class="min-vh-100 bg-light py-5">
+
+			<div class="container">
+				<div>
+<!-- 					<div class="col-4">
+						<img src="../images/product1.jpg" alt="product" class="img-fluid">
+					</div> -->
+					<center><h3 class="mt-5">User Profile</h3></center>
+					<div class="row mt-5 d-block" id="userProfile">
+
+						<table class="table table-striped mx-auto col-6">
+							<thead></thead>
+							<tbody>
+								<tr>
+									<td><strong>First Name:</strong></td>
+									<td id="firstName" colspan="2"></td>
+								</tr>
+								<tr>
+									<td><strong>Last Name:</strong></td>
+									<td id="lastName" colspan="2"></td>
+								</tr>
+								<tr>
+									<td><strong>Email Address:</strong></td>
+									<td id="email" colspan="2"></td>
+								</tr>
+								<tr>
+									<td><strong>Mobile Number:</strong></td>
+									<td id="mobileNo" colspan="2"></td>
+								</tr>
+								<tr>
+									<td><strong>Active:</strong></td>
+									<td id="active"></td>
+									<td><span id="activeBtn"></span></td>
+								</tr>
+								<tr>
+									<td><strong>Admin:</strong></td>
+									<td id="admin"></td>
+									<td><span id="adminBtn"></span></td>
+								</tr>
+							</tbody>	
+						</table>
+
+<!-- 						<div class="col-3 mx-auto">
+							<label><strong>First Name:</strong></label>
+							<label id="firstName"></label>
+						</div>
+
+						<div class="col-3 mx-auto">
+							<label><strong>Last Name:</strong></label>
+							<label id="lastName"></label>
+						</div>
+
+						<div class="col-3 mx-auto">
+							<label><strong>Email Address:</strong></label>
+							<label id="email"></label>
+						</div>
+
+						<div class="col-3 mx-auto">
+							<label><strong>Mobile Number:</strong></label>
+							<label id="mobileNo"></label>
+						</div>
+
+						<div class="col-3 mx-auto">
+							<label><strong>Active:</strong></label>
+							<label id="active"></label>
+							<span id="activeBtn" class="ml-5"></span>
+						</div>
+
+						<div class="col-3 mx-auto mt-3">
+							<label><strong>Admin:</strong></label>
+							<label id="admin">Yes</label>
+							<span id="adminBtn" class="ml-5"></span>
+						</div> -->
+
+						<div class="col-3 mx-auto mt-4">
+							<a class="btn btn-dark btn-block" href="./userManagement.html">Back to list</a>
+							<a class="btn btn-info mt-2 btn-block" href="./main.html">Back to main</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- footer -->
+			<div class="bg-dark p-0 fixed-bottom d-flex align-items-center justify-content-center">
+				<p class="m-0 text-white"> Carine &#64; March 2022 | E-commerce website | Zuitt Coding Bootcamp &#169;</p>
+			</div>
+		</main>
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+		<!-- External JS -->
+		<script src="./../js/script.js"></script>
+		<script src="./../js/profile.js"></script>
+	</body>
+</html>
