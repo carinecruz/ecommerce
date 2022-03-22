@@ -40,24 +40,26 @@ if (localStorage.getItem('token') !== null ){
 
 					list += `
 						<tr>
-							<th scope="row"><a href="./profile.html?userId=${user._id}">${count}</a></th>
-							<td><a href="./profile.html?userId=${user._id}">${user.firstName}</a></td>
-							<td><a href="./profile.html?userId=${user._id}">${user.lastName}</a></td>
-							<td><a href="./profile.html?userId=${user._id}">${user.email}</a></td>
-							<td><a href="./profile.html?userId=${user._id}">${user.mobileNo}</a></td>`
+							<th scope="row">${count}</th>
+							<td>${user.firstName}</td>
+							<td>${user.lastName}</td>
+							<td>${user.email}</td>
+							<td>${user.mobileNo}</td>`
 					if (user.isAdmin == true){
-						list += `<td><a href="./profile.html?userId=${user._id}">Yes</a></td>`
+						list += `<td>Yes</td>`
 					} else {
-						list += `<td><a href="./profile.html?userId=${user._id}">No</a></td>`
+						list += `<td>No</td>`
 					}
 
 					if (user.isActive == true){
-						list += `<td><a href="./profile.html?userId=${user._id}">Yes</a></td>`
+						list += `<td>Yes</td>`
 					} else {
-						list += `<td><a href="./profile.html?userId=${user._id}">No</a></td>`
+						list += `<td>No</td>`
 					}
 
-					list += `</tr>`;
+					list += `
+						<td><a href="./profile.html?userId=${user._id}">Details</a></td>
+					</tr>`;
 
 					count++
 				})

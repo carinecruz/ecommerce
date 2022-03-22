@@ -44,9 +44,15 @@ if (localStorage.getItem('token') !== null ){
 							<td>&#8369;${order.totalAmount.toFixed(2)}</td>
 							<td>${order.paymentStatus}</td>
 							<td>${order.orderStatus}</td>
-							<td><a href="./order.html?orderId=${order._id}">Details</a></td>
+							<td>${order.purchasedOn}</td>`
+
+					if (order.orderFulfilled === undefined){
+						list+= `<td>---</td>`
+					} else {
+						list+= `<td>${order.orderFulfilled}</td>`
+					}
 							
-						</tr>`;
+					list += `<td><a href="./order.html?orderId=${order._id}">Details</a></td></tr>`;
 					count++
 				})
 			orderList.innerHTML = list;
@@ -89,9 +95,15 @@ if (localStorage.getItem('token') !== null ){
 							<td>&#8369;${order.totalAmount.toFixed(2)}</td>
 							<td>${order.paymentStatus}</td>
 							<td>${order.orderStatus}</td>
-							<td><a href="./order.html?orderId=${order._id}">Details</a></td>
+							<td>${order.purchasedOn}</td>`;
+
+					if (order.orderFulfilled === undefined){
+						list+= `<td>---</td>`
+					} else {
+						list+= `<td>${order.orderFulfilled}</td>`
+					}
 							
-						</tr>`;
+					list += `<td><a href="./order.html?orderId=${order._id}">Details</a></td></tr>`;
 					count++
 				})
 			orderList.innerHTML = list;
