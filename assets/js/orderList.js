@@ -2,6 +2,7 @@ const logOut = document.getElementById('navSession');
 const orders = document.getElementById('orders');
 const cart = document.getElementById('cart');
 const orderList = document.getElementById('orderList');
+const users = document.getElementById('users');
 
 let list = "";
 
@@ -23,6 +24,11 @@ if (localStorage.getItem('token') !== null ){
 	//user is admin only
 
 	if (localStorage.getItem('admin') === "true"){
+		users.innerHTML = `
+			<li class="list-unstyled mr-3">
+				<a href="./userManagement.html" class="text-white font-weight-bold">USERS</a>
+			</li>
+			`
 		
 		fetch(`https://tranquil-refuge-66470.herokuapp.com/api/orders/all-orders`, {
 			method: "GET",

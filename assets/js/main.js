@@ -20,6 +20,12 @@ if (localStorage.getItem('token') !== null ){
 		</li>
 	`
 
+	orders.innerHTML = `
+		<li class="list-unstyled mr-3">
+			<a href="./orderList.html" class="text-white font-weight-bold">ORDERS</a>
+		</li>
+	`
+
 	logOut.addEventListener('click', (e) => {
 		localStorage.clear();
 		window.location.replace('./login.html');
@@ -30,21 +36,16 @@ if (localStorage.getItem('token') !== null ){
 			<a href="./login.html" class="text-white font-weight-bold" id="logInlink">LOG IN</a>
 		</li>
 	`
+
 }
 
 // --------- Retrieve List of Active Products ------------
 // non-admin
 if (isAdmin !== "true"){
 
-	orders.innerHTML = `
-		<li class="list-unstyled mr-3">
-			<a href="./orderList.html" class="text-white font-weight-bold">ORDERS</a>
-		</li>
-	`
-
 	cart.innerHTML = `
 		<li class="list-unstyled mr-3">
-			<a href="#" class="text-white font-weight-bold">CART</a>
+			<a href="./cart.html" class="text-white font-weight-bold">CART</a>
 		</li>
 	`
 
@@ -77,9 +78,15 @@ if (isAdmin !== "true"){
 		activeProducts.innerHTML = productList;
 	})
 
-
+//admin function
 // --------- Retrieve List of ALL Products ------------
 } else {
+
+	cart.innerHTML = `
+		<li class="list-unstyled mr-3">
+			<a href="./userManagement.html" class="text-white font-weight-bold">USERS</a>
+		</li>
+	`
 
 	let adminDash = document.getElementById('adminDashboard')
 	adminDash.innerHTML = `

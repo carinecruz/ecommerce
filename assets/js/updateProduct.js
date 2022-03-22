@@ -1,5 +1,7 @@
 //declarations
 let logOut = document.getElementById('navSession');
+const users = document.getElementById('users');
+const orders = document.getElementById('orders');
 
 let params = new URLSearchParams(window.location.search);
 const productId = params.get("productId");
@@ -26,6 +28,19 @@ if (localStorage.getItem('token') !== null ){
 		localStorage.clear();
 		window.location.replace('./login.html');
 	})
+
+	if (localStorage.getItem('admin') == "true"){
+		users.innerHTML = `
+			<li class="list-unstyled mr-3">
+				<a href="./userManagement.html" class="text-white font-weight-bold">USERS</a>
+			</li>
+			`
+		orders.innerHTML = `
+			<li class="list-unstyled mr-3">
+				<a href="./orderList.html" class="text-white font-weight-bold">ORDERS</a>
+			</li>
+			`
+	}
 }
 
 //populate update page with product values
@@ -37,7 +52,7 @@ fetch(`https://tranquil-refuge-66470.herokuapp.com/api/products/product/${produc
 })
 .then(result => result.json())
 .then(result => {
-	//console.log(result)
+	
 	pName.value = result.name;
 	pDesc.value = result.description;
 	pPrice.value = result.price;

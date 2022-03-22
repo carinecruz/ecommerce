@@ -1,6 +1,8 @@
 //declarations
 let addProduct = document.getElementById('addProduct');
 let logOut = document.getElementById('navSession');
+const users = document.getElementById('users');
+const orders = document.getElementById('orders');
 
 
 //logout link if user is logged in
@@ -16,6 +18,20 @@ if (localStorage.getItem('token') !== null ){
 		localStorage.clear();
 		window.location.replace('./login.html');
 	})
+
+	if (localStorage.getItem('admin') == "true"){
+
+		users.innerHTML = `
+			<li class="list-unstyled mr-3">
+				<a href="./userManagement.html" class="text-white font-weight-bold">USERS</a>
+			</li>
+			`
+		orders.innerHTML = `
+			<li class="list-unstyled mr-3">
+				<a href="./orderList.html" class="text-white font-weight-bold">ORDERS</a>
+			</li>
+			`
+		}
 }
 
 //create new product listener

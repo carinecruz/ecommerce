@@ -1,4 +1,6 @@
 const logOut = document.getElementById('navSession');
+const users = document.getElementById('users');
+const ordres = document.getElementById('orders');
 
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
@@ -27,6 +29,16 @@ if (localStorage.getItem('token') !== null ){
 	})
 
 	//user is admin only
+	users.innerHTML = `
+		<li class="list-unstyled mr-3">
+			<a href="./userManagement.html" class="text-white font-weight-bold">USERS</a>
+		</li>
+	`
+	orders.innerHTML = `
+		<li class="list-unstyled mr-3">
+			<a href="./orderList.html" class="text-white font-weight-bold">ORDERS</a>
+		</li>
+	`
 
 	if (localStorage.getItem('admin') === "true"){
 		//console.log(`hello`)

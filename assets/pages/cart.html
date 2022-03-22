@@ -27,9 +27,9 @@
 <!-- 				<li class="list-unstyled mr-3">
 					<a href="#" class="text-white font-weight-bold">HOME</a>
 				</li> -->
-<!-- 				<li class="list-unstyled mr-3">
-					<a href="#" class="text-white font-weight-bold">PRODUCTS</a>
-				</li> -->
+				<li class="list-unstyled mr-3">
+					<a href="./main.html" class="text-white font-weight-bold">PRODUCTS</a>
+				</li>
 				<span id="orders" class="text-white font-weight-bold"></span>
 				<span id="cart" class="text-white font-weight-bold"></span>
 				<span id="navSession" class="text-white font-weight-bold"></span>
@@ -38,25 +38,27 @@
 		</div>
 
 		<!-- jumbotron -->
-		<main class="min-vh-100 py-5 bg-light">
+		<main class="min-vh-100 bg-light py-5">
 
 			<div class="container">
-				<div>
-					<h1 id="greeting" class="text-center text-info font-weight-bold"></h1>
-				</div>
-
-				<div id="adminDashboard" class="text-center my-5">
-					
-				</div>
-				<h3 class="text-center">Browse our products</h3>
-				<hr color="white">
-				<div id="activeProducts" class="row d-flex">
-				</div>
-				<hr color="white">
-				<div id="adminLabel">
-				</div>
-
-				<div id="inactiveProducts" class="row d-flex">
+				<div class="row">
+					<div class="col my-auto">
+						<table class="table col-6 mb-4 mx-auto">
+							<thead>
+								<tr>
+									<th colspan="2">
+										<center><h4>My Cart</h4></center>
+									</th>
+								</tr>
+							</thead>
+							<tbody id="orderDetails">
+							</tbody>
+						</table>
+						<div class="col-4 mx-auto">
+							<button class="btn btn-block btn-danger" id="checkout">Check-out</button>
+							<button class="btn btn-block btn-dark" id="empty">Empty Cart</button>
+						</div>
+					</div>
 				</div>
 
 			</div>
@@ -73,6 +75,6 @@
 
 		<!-- External JS -->
 		<script src="./../js/script.js"></script>
-		<script src="./../js/main.js"></script>
+		<script src="./../js/cart.js"></script>
 	</body>
 </html>

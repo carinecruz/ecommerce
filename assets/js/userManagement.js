@@ -1,5 +1,6 @@
 const logOut = document.getElementById('navSession');
 const userList = document.getElementById('userList');
+const orders = document.getElementById('orders');
 
 let list = "";
 
@@ -21,6 +22,12 @@ if (localStorage.getItem('token') !== null ){
 	//user is admin only
 
 	if (localStorage.getItem('admin') === "true"){
+		orders.innerHTML = `
+			<li class="list-unstyled mr-3">
+				<a href="./orderList.html" class="text-white font-weight-bold">ORDERS</a>
+			</li>
+			`
+			
 		//console.log(`hello`)
 		fetch(`https://tranquil-refuge-66470.herokuapp.com/api/users/all-users`, {
 			method: "GET",
