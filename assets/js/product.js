@@ -54,7 +54,8 @@ if (localStorage.getItem('token') !== null ){
 
 		prodDetails.innerHTML = `
 			<p class="mb-2"><h3>${result.name}</h3></p>
-			<p class="mb-4">&#8369; ${result.price}</p>
+			<p class="mb-4">${result.category}</p>
+			<p class="mb-2">&#8369; ${result.price}</p>
 			<p class="mb-5">${result.description}</p></p>
 		`
 
@@ -79,21 +80,21 @@ if (localStorage.getItem('token') !== null ){
 			if ( localStorage.getItem('orders') !== null){
 				let cart = JSON.parse(localStorage.getItem('orders'));
 
-				//if (cart.indexOf(1)){
-				//	alert(`Product already in cart.`)
-				//} else {
+				if (cart.some(item=>item.productId == order.productId)){
+					alert(`Product already in cart.`)
+				} else {
 					cart.push(order);
 					localStorage.setItem('orders', JSON.stringify(cart));
-				//}
+					alert('Order added to cart.');
+				}
 			//add to local storage if not exists
 			} else {
 				
 				let orderArr = [];
 				orderArr.push(order);
-				localStorage.setItem('orders', JSON.stringify(orderArr))
+				localStorage.setItem('orders', JSON.stringify(orderArr));
+				alert('Order added to cart.');
 			}
-
-			alert('Order added to cart.');
 
 		})
 

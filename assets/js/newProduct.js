@@ -4,7 +4,6 @@ let logOut = document.getElementById('navSession');
 const users = document.getElementById('users');
 const orders = document.getElementById('orders');
 
-
 //logout link if user is logged in
 if (localStorage.getItem('token') !== null ){
 
@@ -43,6 +42,7 @@ addProduct.addEventListener('submit', (e) => {
 	let price = document.getElementById('price').value;
 	let desc = document.getElementById('description').value;
 	let stocks = document.getElementById('stocks').value;
+	const category = document.getElementById('category').value;
 
 	//send request to server to add new product
 	fetch(`https://tranquil-refuge-66470.herokuapp.com/api/products/new-product`, {
@@ -55,7 +55,8 @@ addProduct.addEventListener('submit', (e) => {
 			name: prodName,
 			price: price,
 			description: desc,
-			stockCount: stocks
+			stockCount: stocks,
+			category: category
 		})
 	})
 	.then(result => result.json())

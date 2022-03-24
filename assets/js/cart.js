@@ -67,6 +67,7 @@ if (localStorage.getItem('token') !== null ){
 	empty.addEventListener('click', (e) => {
 		localStorage.removeItem('orders');
 		alert('Cart is empty');
+		window.location.replace('./cart.js');
 	})
 
 	//Event listener for checkout -------------------------------

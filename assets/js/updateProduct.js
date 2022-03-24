@@ -12,6 +12,7 @@ let pPrice = document.getElementById('price');
 let pStocks = document.getElementById('stocks');
 let pQtySold = document.getElementById('qtySold');
 let pStatus = document.getElementById('prodStatus');
+let pCategory = document.getElementById('category');
 let statusBtn = document.getElementById('statusBtn'); 
 let updateProduct = document.getElementById('updateProduct');
 
@@ -57,6 +58,7 @@ fetch(`https://tranquil-refuge-66470.herokuapp.com/api/products/product/${produc
 	pDesc.value = result.description;
 	pPrice.value = result.price;
 	pStocks.value = result.stockCount;
+	pCategory.value = result.category;
 	pQtySold.innerHTML = result.quantitySold;
 	if (result.isActive == true){
 		pStatus.innerHTML = "Offered";
@@ -104,7 +106,8 @@ updateProduct.addEventListener('submit', (e) => {
 			name: pName.value,
 			description: pDesc.value,
 			price: Number(pPrice.value),
-			stockCount: pStocks.value
+			stockCount: pStocks.value,
+			category: pCategory.value
 		})
 	})
 	.then(result => result.json())
